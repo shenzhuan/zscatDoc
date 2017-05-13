@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% include head.html %}
+	<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+</head>
+<body>
+	<nav class="top-bar fixed">
+		<ul>
+			<!-- Title Area -->
+			<li class="name">
+				<h1>
+					<a href="/">
+						<img src="/images/blade-bar-logo.png" alt="logo" width="25" height="25" />
+						&nbsp; Blade Web Framework
+					</a>
+				</h1>
+			</li>
+			<li class="toggle-topbar"><a href="#"></a></li>
+		</ul>
+		<section>
+			<!-- Right Nav Section -->
+			<ul class="right" style="padding-right: 10px;">
+				<li>
+					<a href="/index.html" class="fa fa-home"> 首页</a>
+				</li>
+				<li>
+					<a href="/apidocs" class="fa fa-book"> API文档</a>
+				</li>
+				<!-- <li class="divider"></li> -->
+				<li class="has-dropdown">
+					<a class="fa fa-hashtag" href="/docs/cn/overview.html"> 开发指南</a>
+					<ul class="dropdown">
+						{% include nav_cn.html %}
+					</ul>
+				</li>
+
+				<li>
+					<a href="/license.html" class="fa fa-legal"> License</a>
+				</li>
+
+				<li>
+					<a href="/index_en.html"  class="fa fa-language"> English</a>
+				</li>
+
+			</ul>
+		</section>
+	</nav>
+
+	<!-- Main Body -->
+	<div class="row">
+		<div class="nine columns">
+			<div id="content">
+				{{ content }}
+			</div>
+		</div>
+
+		<!-- Sidebar -->
+		<div class="three columns sidebar">
+			<p>
+				<a target="_blank" href="https://github.com/bladejava/website/blob/master/{{ page.path }}">文档有问题? 在GITHUB编辑该页</a>
+			</p>
+
+			<a href="https://github.com/biezhi/blade" class="radius button fa fa-github huge">
+				Download <br/> from Github
+			</a>
+			<h4>开发指南</h4>
+			<ul class="side-nav">
+				{% include nav_cn.html %}
+			</ul>
+		</div>
+	</div>
+	
+	<!-- Footer -->
+	<footer class="row">
+		<div class="twelve columns">
+			<div class="row">
+				<div class="six columns">
+					<p>&copy; Copyright 2017, <a href="http://bladejava.com" >Blade Framework</a></p>
+				</div>
+				<div class="six columns">
+					<ul class="inline-list right">
+						<!-- <li><a href="#">Link 1</a></li> -->
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	<!-- <script src="//cdn.bootcss.com/prism/9000.0.1/prism.min.js"></script> -->
+
+	<script type="text/javascript">
+		
+	</script>
+</body>
+</html>

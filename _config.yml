@@ -1,0 +1,13 @@
+auto: true
+# pygments: true
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  
+docPageNames: [overview, architecture, quickstart, core, view, configuration, database]
+docPageTitles_EN: ["Overview", "Architecture", "Quickstart", "Core", "View", "Configuration", "Database"]
+docPageTitles_CN: ["框架简介", "系统架构", "快速入门", "核心概念", "视图模板", "框架配置", "数据库"]
+docPageIcons: [home, sitemap, paper-plane-o, diamond, code, cog, cubes]
+site.title: "Blade Framework"

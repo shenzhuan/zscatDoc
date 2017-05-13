@@ -1,0 +1,10 @@
+
+{% for pageName in site.docPageNames %}
+	{% assign navClass = '' %}
+	{% if page.docPage == pageName %}
+		{% assign navClass = 'active' %}
+	{% endif %}
+	<li class="{{navClass}}">
+		<a href="/docs/cn/{{pageName}}.html"><i class="fa fa-{{site.docPageIcons[forloop.index0]}}"></i> {{site.docPageTitles_CN[forloop.index0]}}</a>
+	</li>
+{% endfor %}
